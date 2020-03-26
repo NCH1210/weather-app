@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <br />
+      <h1>
+        Weather App Test
+      </h1>
+      <br />
+    </div>
+    <div class="container">
+      <form class="searchform" id="search-form">
+        <input type="text" id="city-input" placeholder="Enter your city" autocomplete="off" />
+        <input type="submit" value="Search" />
+        <input type="button" value="Current" id="current-location" />
+        <br />
+        <hr />
+        <h2 id="city"></h2>
+        <h3 class="date-display"></h3>
+        <br />
+        <p>
+          <span id="description"></span>
+          <span id="description-icon">⛅</span>
+        </p>
+        <br />
+        <div class="row">
+          <div class="col-sm">
+            Temperature
+          </div>
+          <div class="col-sm">
+            Humidity
+          </div>
+          <div class="col-sm">
+            Wind
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm"><span id="temperature"></span>°C</div>
+          <div class="col-sm"><span id="humidity">0</span>%</div>
+          <div class="col-sm"><span id="wind">10</span>km/h</div>
+        </div>
+      </form>
+
+      <br />
+      <hr />
+      <h4><span class="badge badge-secondary">Weekdays</span></h4>
+      <br />
+      <div class="container-group">
+        <div class="row">
+          <div class="col-sm">
+            Monday
+          </div>
+          <div class="col-sm">
+            Tuesday
+          </div>
+          <div class="col-sm">
+            Wednesday
+          </div>
+          <div class="col-sm">
+            Thursday
+          </div>
+          <div class="col-sm">
+            Friday
+          </div>
+          <div class="col-sm">
+            Saturday
+          </div>
+          <div class="col-sm">
+            Sunday
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            🌡 30°C
+          </div>
+          <div class="col-sm">
+            🌬 19°C
+          </div>
+          <div class="col-sm">
+            ❄ 1°C
+          </div>
+          <div class="col-sm">
+            ☃ 6°C
+          </div>
+          <div class="col-sm">
+            ☔ 20°C
+          </div>
+          <div class="col-sm">
+            ⛱ 29°C
+          </div>
+          <div class="col-sm">
+            🌈 23°C
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+      
+    </script>
+  </body>
+</html>

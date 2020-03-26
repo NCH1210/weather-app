@@ -18,6 +18,17 @@ form {
   margin: 1px 1px 20px 1px;
 }
 
+footer {
+  text-align: center;
+  margin: 0 auto;
+  color: grey;
+  font-family: "Courier New", Courier, monospace;
+}
+
+a {
+  color: grey;
+  font-family: "Courier New", Courier, monospace;
+}
 .date-display {
   font-size: 20px;
 }

@@ -1,0 +1,27 @@
+body {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 10px 10px 10px;
+  font-family: "Orbitron", sans-serif;
+}
+
+h2 {
+  margin: 5px 5px 20px 5px;
+}
+
+p {
+  display: block;
+  margin: 0 auto;
+}
+form {
+  margin: 1px 1px 20px 1px;
+}
+
+.date-display {
+  font-size: 20px;
+}
+
+.description {
+  color: grey;
+}

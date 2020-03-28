@@ -5,6 +5,7 @@ body {
   padding: 10px 10px 10px 10px;
   font-family: "Orbitron", sans-serif;
   max-width: 100%;
+  margin-top: 10px;
 }
 
 h2 {
@@ -25,16 +26,16 @@ form {
   margin: 1px 1px 20px 1px;
 }
 
-footer {
+a.col-sm #FahrenheitLink {
+  color: blue;
+}
+
+footer,
+a.Github {
   text-align: center;
   margin: 0 auto;
   color: grey;
-  font-family: "Courier New", Courier, monospace;
-}
-
-a {
-  color: grey;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Source Code Pro", monospace;
 }
 
 .weather-app {
@@ -58,6 +59,7 @@ hr {
 
 footer {
   margin: 10px;
+  font-family: "Source Code Pro", monospace;
 }
 
 .col-sm {
@@ -75,4 +77,13 @@ image {
   margin-left: -5px;
   line-height: 20px;
   padding: 20px 0 0px 0;
+}
+
+.display .active {
+  color: black;
+  cursor: default;
+}
+
+.display .active:hover {
+  text-decoration: none;
 }

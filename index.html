@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css" />
     
   </head>
@@ -52,10 +53,11 @@
             Wind
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm"><span id="temperature"></span><span class="units">°C | °F</span></div>
-          <div class="col-sm"><span id="humidity">0</span>%</div>
-          <div class="col-sm"><span id="wind">10</span>km/h</div>
+        <div class="row display">
+          <div class="col-sm">
+            <span id="temperature"></span><span id="units"><a href="#" class="active" id="CelsiusLink" >°C</a> |<a id="FahrenheitLink" href="#">°F</a></span></div>
+          <div class="col-sm"><span id="humidity"></span>%</div>
+          <div class="col-sm"><span id="wind"></span>km/h</div>
         </div>
       </form>
       <hr />
@@ -90,7 +92,7 @@
     </div>
   
     <footer>
-    <a href="https://github.com/NCH1210/weather-app">
+    <a class="Github" href="https://github.com/NCH1210/weather-app">
       myGithub
     </a>
 

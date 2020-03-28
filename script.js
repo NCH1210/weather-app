@@ -28,6 +28,7 @@ h3.innerHTML = `${today} ${hours}:${minutes}`;
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -75,4 +76,28 @@ searchform.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Porto");
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#FahrenheitLink");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#CelsiusLink");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+searchCity("Paris");

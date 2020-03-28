@@ -70,4 +70,4 @@ searchform.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("New York");
+searchCity("City");

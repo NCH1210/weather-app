@@ -4,6 +4,7 @@ body {
   margin: 0 auto;
   padding: 10px 10px 10px 10px;
   font-family: "Orbitron", sans-serif;
+  max-width: 100%;
 }
 
 h2 {
@@ -29,10 +30,31 @@ a {
   color: grey;
   font-family: "Courier New", Courier, monospace;
 }
+
+.weather-app {
+  max-width: 800px;
+  border: 1px solid #dadde1;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 15px;
+}
 .date-display {
   font-size: 20px;
 }
 
 .description {
   color: grey;
+}
+
+hr {
+  color: #dadde1;
+}
+
+footer {
+  margin: 10px;
+}
+
+.col-sm {
+  width: 15%;
+  margin: 1px;
 }

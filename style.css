@@ -6,10 +6,15 @@ body {
   font-family: "Orbitron", sans-serif;
   max-width: 100%;
   margin-top: 10px;
+  max-height: 100%;
+}
+
+form {
+  margin: 1px 1px 20px 1px;
 }
 
 h2 {
-  margin: 5px 5px 20px 5px;
+  margin: 5px 5px 10px 5px;
 }
 
 h3 {
@@ -20,10 +25,16 @@ p {
   display: block;
   margin: 0 auto;
   padding: 0 0 0 0;
-  margin: -20px 0 -15px 0;
+  margin: -10px 0 -5px 0;
 }
-form {
-  margin: 1px 1px 20px 1px;
+
+image {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+hr {
+  color: #dadde1;
 }
 
 a.col-sm #FahrenheitLink {
@@ -35,7 +46,6 @@ a.Github {
   text-align: center;
   margin: 0 auto;
   color: grey;
-  font-family: "Source Code Pro", monospace;
 }
 
 .weather-app {
@@ -45,21 +55,23 @@ a.Github {
   padding: 10px;
   border-radius: 15px;
 }
+
+.btn {
+  max-width: 400px;
+  max-height: 40px;
+  margin-top: -4px;
+}
+
+#forecast-block {
+  padding: -10px;
+}
+
 .date-display {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .description {
   color: grey;
-}
-
-hr {
-  color: #dadde1;
-}
-
-footer {
-  margin: 10px;
-  font-family: "Source Code Pro", monospace;
 }
 
 .col-sm {
@@ -67,16 +79,11 @@ footer {
   margin: 1px;
 }
 
-image {
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-}
-
 #description {
-  font-size: 20px;
-  margin-left: -5px;
-  line-height: 20px;
-  padding: 20px 0 0px 0;
+  font-size: 18px;
+  margin-left: -4px;
+  line-height: 10px;
+  padding: 10px 0 0px 0;
 }
 
 .display .active {

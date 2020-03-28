@@ -26,6 +26,36 @@ if (minutes < 10) {
 
 h3.innerHTML = `${today} ${hours}:${minutes}`;
 
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${formatHours(timestamp)}`;
+}
+
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${hours}:${minutes}`;
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   celsiusTemperature = response.data.main.temp;
@@ -45,10 +75,32 @@ function displayWeatherCondition(response) {
   );
 }
 
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast-block");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+    let forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+  <div class="col-2">
+      <span id="hours">${formatHours(
+        forecast.dt * 1000
+      )}</span> <image src="http://openweathermap.org/img/wn/${
+      forecast.weather[0].icon
+    }@2x.png" id="icon"/></span>
+      <span id="forecast">${Math.round(forecast.main.temp_max)}°C</span>
+    </div>`;
+  }
+}
+
 function searchCity(city) {
   let apiKey = "f45e74d7c2b9da42eac08c872edb3d3d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function handleSubmit(event) {
@@ -70,20 +122,6 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-let searchform = document.querySelector("#search-form");
-searchform.addEventListener("submit", handleSubmit);
-
-let currentLocationButton = document.querySelector("#current-location");
-currentLocationButton.addEventListener("click", getCurrentLocation);
-
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#FahrenheitLink");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#CelsiusLink");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
@@ -100,4 +138,19 @@ function displayCelsiusTemperature(event) {
   fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-searchCity("Paris");
+
+let searchform = document.querySelector("#search-form");
+searchform.addEventListener("submit", handleSubmit);
+
+let currentLocationButton = document.querySelector("#current-location");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#FahrenheitLink");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#CelsiusLink");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+searchCity("Porto");

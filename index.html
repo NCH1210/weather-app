@@ -14,34 +14,27 @@
     <link
       href="https://fonts.googleapis.com/css?family=Orbitron&display=swap"
       rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    />  
     <link href="style.css" rel="stylesheet" type="text/css" />
-    
   </head>
   <body>
     <div class="container weather-app">
       <h1>
         Weather App
       </h1>
-      <br />
-    
     <div class="container">
       <form class="searchform" id="search-form">
         <input type="text" id="city-input" placeholder="Enter your city..." autocomplete="off" autofocus="on"/>
-        <input type="submit" value="Search" />
-        <input type="button" value="Current" id="current-location" />
-        <br />
+        <input type="submit" class="btn btn-secondary" value="Search" />
+        <input type="button" class="btn btn-success" value="Current" id="current-location" />
         <hr />
         <h2 id="city"></h2>
         <h3 class="date-display"></h3>
-        <br />
         <p>
-          <image src="http://openweathermap.org/img/wn/03d@2x.png" width= "10%" id="description-icon"></image>
+          <image src="http://openweathermap.org/img/wn/02d@2x.png" width= "10%" id="description-icon"></image>
          <span id="description"></span>
         </p>
-        <br />
+        
         <div class="row">
           <div class="col-sm">
             Temperature
@@ -62,43 +55,21 @@
       </form>
       <hr />
       <h4><span class="badge badge-secondary">Weekdays</span></h4>
-      <br />
       <div class="container-group">
-        <div class="row">
-          <div class="col-sm">
-            Monday <span id="icon">🌞</span><span id="forecast">19°C</span>
-          </div>
-          <div class="col-sm">
-            Tuesday <span id="icon">🌞</span><span id="forecast">19°C</span>
-          </div>
-          <div class="col-sm">
-            Wednesday <span id="icon">🌞</span><span id="forecast">19°C</span>
-          </div>
-          <div class="col-sm">
-            Thursday <span id="icon">🌞</span><span id="forecast">19°C</span>
-          </div>
-          <div class="col-sm">
-            Friday <span id="icon">🌞</span><span id="forecast">19°C</span>
-          </div>
-          <div class="col-sm">
-            Saturday <span id="icon">🌞</span><span id="forecast">19°C</span>
-          </div>
-          <div class="col-sm">
-            Sunday <span id="icon">🌞</span><span id="forecast">19°C</span>
-          </div>
+        <div class="row" id="forecast-block">
+          <div class="col-2">
+      <span id="hours"></span> <image src="http://openweathermap.org/img/wn/02d@2x.png" id="icon"/></span>
+      <span id="forecast"></span></div>;
         </div>
       </div>
     </div>
-    </div>
-  
+  </div>
     <footer>
     <a class="Github" href="https://github.com/NCH1210/weather-app">
       myGithub
     </a>
-
     </footer>
     <script src="script.js"></script>
-      
     </script>
   </body>
 </html>

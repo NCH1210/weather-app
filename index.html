@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather app</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -16,7 +17,7 @@
     />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
   </head>
   <body>
     <div class="container weather-app">
@@ -27,7 +28,7 @@
     
     <div class="container">
       <form class="searchform" id="search-form">
-        <input type="text" id="city-input" placeholder="Enter your city..." />
+        <input type="text" id="city-input" placeholder="Enter your city..." autocomplete="off" autofocus="on"/>
         <input type="submit" value="Search" />
         <input type="button" value="Current" id="current-location" />
         <br />
@@ -36,7 +37,7 @@
         <h3 class="date-display"></h3>
         <br />
         <p>
-          <image src="http://openweathermap.org/img/wn/04d@2x.png" width= "10%" id="description-icon"></image>
+          <image src="http://openweathermap.org/img/wn/03d@2x.png" width= "10%" id="description-icon"></image>
          <span id="description"></span>
         </p>
         <br />

@@ -3,7 +3,7 @@ body {
   text-align: center;
   margin: 0 auto;
   padding: 10px 10px 10px 10px;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Bellota", cursive;
   max-width: 100%;
   margin-top: 10px;
   max-height: 100%;
@@ -54,12 +54,13 @@ a.Github {
   margin: 0 auto;
   padding: 10px;
   border-radius: 15px;
+  background: f9fcfb;
 }
-
 .btn {
   max-width: 400px;
   max-height: 40px;
   margin-top: -4px;
+  border-radius: 10px;
 }
 
 #forecast-block {
@@ -93,4 +94,28 @@ a.Github {
 
 .display .active:hover {
   text-decoration: none;
+}
+
+.btn-search {
+  background: #70d5d2;
+  color: white;
+  border: 1px solid white;
+}
+
+.btn-current {
+  background: #fc6f9c;
+  color: white;
+  border: 1px solid white;
+}
+
+.hue-rotate {
+  -webkit-filter: hue-rotate(45deg);
+  filter: hue-rotate(45deg);
+}
+
+.badge-light {
+  margin-bottom: 10px;
+  background: #9771f3;
+  color: white;
+  border: 1px solid white;
 }

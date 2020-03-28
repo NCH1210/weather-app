@@ -16,7 +16,7 @@
       rel="stylesheet"
     />  
     <link href="style.css" rel="stylesheet" type="text/css" />
-    
+    <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@300&family=Text+Me+One&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container weather-app">
@@ -26,12 +26,12 @@
     <div class="container">
       <form class="searchform" id="search-form">
         <input type="text" id="city-input" placeholder="Enter your city..." autocomplete="off" autofocus="on"/>
-        <input type="submit" class="btn btn-primary" value="Search" />
-        <input type="button" class="btn btn-success" value="Current" id="current-location" />
+        <input type="submit" class="btn-search" value="Search" />
+        <input type="button" class="btn-current" value="Current" id="current-location" />
         <hr />
         <h2 id="city"></h2>
         <h3 class="date-display"></h3>
-        <p>
+        <p class="hue-rotate">
           <image src="http://openweathermap.org/img/wn/02d@2x.png" width= "10%" id="description-icon"></image>
          <span id="description"></span>
         </p>
@@ -55,8 +55,8 @@
         </div>
       </form>
       <hr />
-      <h4><span class="badge badge-secondary">Weekdays</span></h4>
-      <div class="container-group">
+      <h4><span class="badge badge-light">Weekdays</span></h4>
+      <div class="container-group hue-rotate">
         <div class="row" id="forecast-block">
           <div class="col-2">
       <span id="hours"></span> <image src="http://openweathermap.org/img/wn/02d@2x.png" id="icon"/></span>

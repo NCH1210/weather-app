@@ -11,9 +11,15 @@ h2 {
   margin: 5px 5px 20px 5px;
 }
 
+h3 {
+  margin: 5px 0px 5px 0px;
+}
+
 p {
   display: block;
   margin: 0 auto;
+  padding: 0 0 0 0;
+  margin: -20px 0 -15px 0;
 }
 form {
   margin: 1px 1px 20px 1px;
@@ -57,4 +63,16 @@ footer {
 .col-sm {
   width: 15%;
   margin: 1px;
+}
+
+image {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+#description {
+  font-size: 20px;
+  margin-left: -5px;
+  line-height: 20px;
+  padding: 20px 0 0px 0;
 }
